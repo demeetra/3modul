@@ -1,0 +1,73 @@
+body{
+  background-color: black;
+  overflow: hidden;
+}
+
+/* ноги */
+.foot{
+  position: relative;
+  left: 60%;
+  width: 8%;
+  height: 650px;
+  background-image: url('images/foot1.svg');
+  background-size: 100% 100%;
+}
+
+/* рыбки */
+@keyframes move1 {
+  0%{left: -20%;}
+  50%{left: 40%;}
+  100%{left: 120%;}
+}
+@keyframes move2 {
+  0%{left: -20%;}
+  50%{left: 20%;}
+  100%{left: 110%;}
+}
+@keyframes move3 {
+  0%{left: -20%;}
+  50%{left: 30%;}
+  100%{left: 110%;}
+}
+.fish{
+  position: absolute;
+  width: 20%;
+  height: 100px;
+  background-size: 100% 100%;
+}
+.fish1{
+  background-image: url('images/fish1.svg');
+  animation: move1 10s infinite linear;
+}
+.fish2{
+  background-image: url('images/fish2.svg');
+  animation: move2 7s infinite linear;
+}
+.fish3{
+  background-image: url('images/fish3.svg');
+  animation: move3 8s infinite linear;
+}
+.fish4{
+  background-image: url('images/fish4.svg');
+}
+.f1{
+  top: 30%;
+}
+.f2{
+  top: 50%;
+}
+.f3{
+  top: 60%;
+}
+.f4{
+  top: 100%;
+}
+.f5{
+  top: 140%;
+}
+.f6{
+  top: 170%;
+}
+.f7{
+  top: 190%;
+}

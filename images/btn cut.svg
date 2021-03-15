@@ -1,0 +1,10 @@
+<svg width="150" height="150" viewBox="0 0 150 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="2" width="146" height="146" fill="black" stroke="#8B8B8B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect width="10.1308" height="59.4342" rx="5.06542" transform="matrix(0.994398 -0.105703 -0.105703 -0.994398 81.748 131.094)" fill="#8B8B8B"/>
+<rect width="22.1205" height="36.9944" rx="11.0603" transform="matrix(0.999605 0.0281187 -0.372739 0.927936 88.8643 18.4243)" fill="#8B8B8B"/>
+<rect x="69.2559" y="131.062" width="10.1308" height="59.4342" rx="5.06542" transform="rotate(-173.932 69.2559 131.062)" fill="#8B8B8B"/>
+<rect width="22.1205" height="36.9944" rx="11.0603" transform="matrix(-0.999605 0.0281185 0.372739 0.927936 61.4482 18.4424)" fill="#8B8B8B"/>
+<rect width="17.5636" height="29.3734" rx="8.7818" transform="matrix(0.999605 0.0281187 -0.372739 0.927936 89.2236 22.3784)" fill="black"/>
+<rect width="17.5636" height="29.3734" rx="8.7818" transform="matrix(-0.999605 0.0281185 0.372739 0.927936 60.8633 22.3784)" fill="black"/>
+<circle cx="74.8635" cy="62.1731" r="8.78005" transform="rotate(-180 74.8635 62.1731)" fill="#8B8B8B"/>
+</svg>
