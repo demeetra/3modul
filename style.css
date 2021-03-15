@@ -1,8 +1,37 @@
 body{
   background-color: black;
-  overflow: hidden;
-}
+  overflow-x: hidden;
 
+}
+/* кнопки */
+.btn{
+  position: fixed;
+  width: 12%;
+  height: 12%;
+  left: 85%;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.lupa{
+  background-image: url('images/btn lupa.svg');
+  top: 12%;
+}
+.color{
+  background-image: url('images/btn color.svg');
+  top: 26%;
+}
+.brush{
+  background-image: url('images/btn brush.svg');
+  top: 40%;
+}
+.cut{
+  background-image: url('images/btn cut.svg');
+  top: 54%;
+}
+.zlo{
+  background-image: url('images/btn zlo.svg');
+  top: 68%;
+}
 /* ноги */
 .foot{
   position: relative;
@@ -29,11 +58,20 @@ body{
   50%{left: 30%;}
   100%{left: 110%;}
 }
+@keyframes move4 {
+  0%{left: -20%;}
+  50%{left: 50%;}
+  100%{left: 110%;}
+}
+
 .fish{
   position: absolute;
   width: 20%;
   height: 100px;
   background-size: 100% 100%;
+}
+.fish:hover{
+  animation-play-state: paused;
 }
 .fish1{
   background-image: url('images/fish1.svg');
@@ -49,6 +87,7 @@ body{
 }
 .fish4{
   background-image: url('images/fish4.svg');
+  animation: move4 10s infinite linear;
 }
 .f1{
   top: 30%;
@@ -70,4 +109,20 @@ body{
 }
 .f7{
   top: 190%;
+}
+/* подвал */
+.dno{
+  position: relative;
+  width: 100%;
+  height: 100px;
+  background-image: url('images/dno.svg');
+  background-size: 100% 100%;
+}
+.octopus{
+  position: relative;
+  width: 60%;
+  height: 400px;
+  background-image: url('images/octopus.svg');
+  background-size: 100% 100%;
+
 }
