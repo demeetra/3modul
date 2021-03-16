@@ -37,7 +37,7 @@ body{
   position: relative;
   left: 60%;
   width: 8%;
-  height: 650px;
+  height: 600px;
   background-image: url('images/foot1.svg');
   background-size: 100% 100%;
 }
@@ -69,9 +69,6 @@ body{
   width: 20%;
   height: 100px;
   background-size: 100% 100%;
-}
-.fish:hover{
-  animation-play-state: paused;
 }
 .fish1{
   background-image: url('images/fish1.svg');
