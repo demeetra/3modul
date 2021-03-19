@@ -6,16 +6,40 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-    
+//       $(document).ready(function() {
+//         function scroll() {
+//             //scrollDistance = $(document).scrollTop(),
+//             // scrollDistance = $('.zlo').offset(),
+//             let podvalTop = $('.podval').offset().top;
+//             let bt = $('.zlo');
+//             let scrollDistance = bt.offset().top + bt.height();
+//           if (scrollDistance >= podvalTop) {
+//             console.log('result', scrollDistance, podvalTop);
+//             $('.btn').removeClass('scroll');
+//           }
+//         };
+//         console.log("set onscroll", scroll);
+//         $(window).on('scroll', scroll);
+// });
+        // scroll();
+        // $(document).scroll(function() {
+        //   scroll();
+        // });
+
     </script>
   </head>
   <body>
     <!-- кнопки -->
-    <div class="btn lupa"></div>
-    <div class="btn color"></div>
-    <div class="btn brush"></div>
-    <div class="btn cut"></div>
-    <div class="btn zlo"></div>
+    <div class="conteiner">
+      <div class="menu">
+
+        <img src="images/btn lupa.svg" alt="" class="btn lupa"></img>
+        <img src="images/btn color.svg" alt=""class="btn color"></img>
+        <img src="images/btn brush.svg" alt="" class="btn brush"></img>
+        <img src="images/btn cut.svg" alt="" class="btn cut"></img>
+        <img src="images/btn zlo.svg" alt="" class="btn zlo"></img>
+      </div>
+    </div>
     <!-- ноги -->
     <div class="foot"></div>
     <div class="foot"></div>
@@ -29,6 +53,13 @@
     <div class="fish fish1 f5"></div>
     <div class="fish fish2 f6"></div>
     <div class="fish fish3 f7"></div>
+    <div class="fish fish1 f8"></div>
+    <div class="fish fish2 f9"></div>
+    <div class="fish fish3 f10"></div>
+    <div class="fish fish4 f11"></div>
+    <div class="fish fish1 f12"></div>
+    <div class="fish fish2 f13"></div>
+    <div class="fish fish3 f14"></div>
     <!-- подвал -->
     <div class="podval">
       <div class="dno"></div>
