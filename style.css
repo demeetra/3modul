@@ -13,8 +13,6 @@
 }
 body{
   background-color: black;
-  overflow-x: hidden;
-
 }
 .h2{
   color: white;
@@ -22,7 +20,10 @@ body{
   font-family: 'cyntho next';
 
 }
-
+.main {
+  height: auto;
+  position: relative;
+}
 .text{
   position: absolute;
   left: 10%;
@@ -34,13 +35,14 @@ body{
 .conteiner{
   position: absolute;
   transform: scale(1);
-  height: 240%;
+  height: 100%;
   width: 10%;
-  left: 80%;  z-index: 1;
+  left: 87.5%;  z-index: 1;
 }
 .menu{
   margin-top: 40%;
   position: sticky;
+  position: -webkit-sticky;
   height: 20%;
   width: 100%;
   top: 1%;
@@ -50,7 +52,7 @@ body{
   position: relative;
   width: 90%;
   padding-bottom: 10%;
-  left: 85%;
+  left: 5%;
   background-size: 100% 100%;
 
 
@@ -88,7 +90,7 @@ body{
   left: 50%;
   top: 0;
   width: 30%;
-  padding-bottom: 200%;
+  height: 100%;
   /* background-color: #34e357;
   opacity: .5; */
 
@@ -220,34 +222,34 @@ margin-top: 16%;
   top: 100%;
 }
 .f5{
-  top: 140%;
+  top: 10%;
 }
 .f6{
-  top: 170%;
+  top: 70%;
 }
 .f7{
-  top: 190%;
+  top: 90%;
 }
 .f8{
-  top: 178%;
+  top: 78%;
 }
 .f9{
-  top: 180%;
+  top: 80%;
 }
 .f10{
-  top: 185%;
+  top: 85%;
 }
 .f11{
-  top: 190%;
+  top: 90%;
 }
 .f12{
-  top: 194%;
+  top: 94%;
 }
 .f13{
-  top: 200%;
+  top: 10%;
 }
 .f14{
-  top: 190%;
+  top: 90%;
 }
 /* подвал */
 .dno{
