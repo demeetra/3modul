@@ -1,10 +1,34 @@
+@import 'reset.css';
+@font-face {
+    font-family: "cyntho next";
+    src: url("fonts/CynthoNext-Bold.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "cyntho next";
+    src: url("fonts/CynthoNext-Light.ttf") format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
 body{
   background-color: black;
   overflow-x: hidden;
 
 }
-.main{
-  position: relative;
+.h2{
+  color: white;
+  font-size: 30px;
+  font-family: 'cyntho next';
+
+}
+
+.text{
+  position: absolute;
+  left: 10%;
+  top: 10%;
+  width: 30%;
+  padding-bottom: 10%;
 }
 /* кнопки */
 .conteiner{
@@ -141,14 +165,10 @@ margin-top: 16%;
   50%{left: 50%;}
   100%{left: 110%;}
 }
-
 .fish{
   position: absolute;
-  width: 14%;
-  padding-bottom: 9%;
   background-size: 100% 100%;
-  background-color: white;
-
+  background-color: black;
 }
 .pink{
   background-color:#E72174;
@@ -159,24 +179,33 @@ margin-top: 16%;
 .green{
   background-color:#95C11F;
 }
-
-.fish1{
+.white{
+  background-color:white;
+}
+.fish{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
   animation: move1 10s infinite linear;
+  width: 14%;
+  padding-bottom: 9%;
 
 }
-
 .fish2{
     -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish2.svg') top left / cover;
     animation: move2 7s infinite linear;
+    width: 15.1%;
+    padding-bottom: 9%;
 }
 .fish3{
     -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish3.svg') top left / cover;
   animation: move3 8s infinite linear;
+  width: 11%;
+  padding-bottom: 9%;
 }
 .fish4{
     -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish4.svg') top left / cover;
   animation: move4 10s infinite linear;
+  width: 13%;
+  padding-bottom: 9%;
 }
 .f1{
   top: 30%;
