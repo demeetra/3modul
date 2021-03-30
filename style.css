@@ -3,6 +3,9 @@ body{
   overflow-x: hidden;
 
 }
+.main{
+  position: relative;
+}
 /* кнопки */
 .conteiner{
   position: absolute;
@@ -118,7 +121,7 @@ margin-top: 16%;
 }
 
 /* рыбки */
-/* @keyframes move1 {
+@keyframes move1 {
   0%{left: -20%;}
   50%{left: 40%;}
   100%{left: 120%;}
@@ -137,31 +140,24 @@ margin-top: 16%;
   0%{left: -20%;}
   50%{left: 50%;}
   100%{left: 110%;}
-} */
+}
 
 .fish{
   position: absolute;
   width: 20%;
   height: 100px;
   background-size: 100% 100%;
-}
-.pink {
-  fill: #E72174;
-}
-.yellow{
-  fill: #95C122;
-}
-.green{
-  fill: #FAB334;
+  background-color: red;
+  clip-path: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg');
 }
 
+
 .fish1{
-  background-color: url('file:///C:/Users/demeetra/YandexDisk/Documents/HSE%20DESIGN/%D0%90%D1%80%D1%82-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%20(%D0%92%D0%B8%D0%BE%D0%BB%D0%B5%D1%82%D1%82%D0%B0)/3%20modul/3modul/images/fish1.svg');
+
   animation: move1 10s infinite linear;
+
 }
-.first1 img{
-  mask: url('images/first1.svg');
-}
+
 .fish2{
     animation: move2 7s infinite linear;
 }
