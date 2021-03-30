@@ -144,27 +144,30 @@ margin-top: 16%;
 
 .fish{
   position: absolute;
-  width: 20%;
-  height: 100px;
+  width: 14%;
+  padding-bottom: 9%;
   background-size: 100% 100%;
   background-color: red;
-  clip-path: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg');
+
 }
 
 
 .fish1{
-
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
   animation: move1 10s infinite linear;
 
 }
 
 .fish2{
+    -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish2.svg') top left / cover;
     animation: move2 7s infinite linear;
 }
 .fish3{
+    -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish3.svg') top left / cover;
   animation: move3 8s infinite linear;
 }
 .fish4{
+    -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish4.svg') top left / cover;
   animation: move4 10s infinite linear;
 }
 .f1{
