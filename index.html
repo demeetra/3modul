@@ -6,26 +6,28 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-//       $(document).ready(function() {
-//         function scroll() {
-//             //scrollDistance = $(document).scrollTop(),
-//             // scrollDistance = $('.zlo').offset(),
-//             let podvalTop = $('.podval').offset().top;
-//             let bt = $('.zlo');
-//             let scrollDistance = bt.offset().top + bt.height();
-//           if (scrollDistance >= podvalTop) {
-//             console.log('result', scrollDistance, podvalTop);
-//             $('.btn').removeClass('scroll');
-//           }
-//         };
-//         console.log("set onscroll", scroll);
-//         $(window).on('scroll', scroll);
-// });
-        // scroll();
-        // $(document).scroll(function() {
-        //   scroll();
-        // });
-
+  //
+  //   $(document).ready(function() {
+  //     // список CSS классов с нужными параметрамиписок классов
+  //     let colors = ["pink", "yellow", "green"];
+  //     function update () {
+  //         // очистить ранее добавленные классы
+  //         $( ".fish" ).removeClass( "pink yellow green" );
+  //         // console.log('bag');
+  //         // циклически добавить случайный класс
+  //         $('.fish').each( function(random) {
+  //             $( this ).addClass( names [Math.floor(Math.random() * names.length)] );
+  //         });
+  //     }
+  //
+  //     // вызывать функцию каждые 1 сек
+  //     setInterval(update, 1000);
+  // });
+  $(document).ready(function(){
+	$("color").click(function(cursor){
+		$(this).addClass("black");
+	});
+});
     </script>
   </head>
   <body>
@@ -45,7 +47,29 @@
     <div class="foot"></div>
     <div class="foot"></div>
     <div class="foot"></div>
+
+    <!-- волосы -->
+    <div class="hair_conteiner_main">
+      <div class="hair_conteiner h_c1">
+        <div class="hair h1"></div>
+        <div class="hair h2"></div>
+      </div>
+      <div class="hair_conteiner">
+        <div class="hair h3"></div>
+        <div class="hair h4"></div>
+      </div>
+      <div class="hair_conteiner">
+        <div class="hair h5"></div>
+        <div class="hair h6"></div>
+      </div>
+      <div class="hair_conteiner">
+        <div class="hair h7"></div>
+        <div class="hair h8"></div>
+      </div>
+    </div>
+
     <!-- рыбки -->
+
     <div class="fish fish1 f1"></div>
     <div class="fish fish2 f2"></div>
     <div class="fish fish3 f3"></div>
