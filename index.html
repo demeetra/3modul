@@ -12,14 +12,14 @@
       let colors = ["pink", "yellow", "green"];
       function update () {
           // очистить ранее добавленные классы
-          // $( ".fish" ).removeClass( "pink yellow green" );
+          $( ".fish" ).removeClass( "pink yellow green" );
           // console.log('bag');
           // циклически добавить случайный класс
           $('.fish').each( function(index) {
               $( this ).addClass( colors [Math.floor(Math.random() * colors.length)] );
           });
       }
-
+      update();
       // вызывать функцию каждые 1.5 сек
       setInterval(update, 1500);
   });
