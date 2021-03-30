@@ -147,10 +147,18 @@ margin-top: 16%;
   width: 14%;
   padding-bottom: 9%;
   background-size: 100% 100%;
-  background-color: red;
+  background-color: white;
 
 }
-
+.pink{
+  background-color:#E72174;
+}
+.yellow{
+  background-color:#FAB334;
+}
+.green{
+  background-color:#95C11F;
+}
 
 .fish1{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;

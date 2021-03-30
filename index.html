@@ -6,23 +6,23 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
-  //
-  //   $(document).ready(function() {
-  //     // список CSS классов с нужными параметрамиписок классов
-  //     let colors = ["pink", "yellow", "green"];
-  //     function update () {
-  //         // очистить ранее добавленные классы
-  //         $( ".fish" ).removeClass( "pink yellow green" );
-  //         // console.log('bag');
-  //         // циклически добавить случайный класс
-  //         $('.fish').each( function(random) {
-  //             $( this ).addClass( names [Math.floor(Math.random() * names.length)] );
-  //         });
-  //     }
-  //
-  //     // вызывать функцию каждые 1 сек
-  //     setInterval(update, 1000);
-  // });
+
+    $(document).ready(function() {
+      // список CSS классов с нужными параметрамиписок классов
+      let colors = ["pink", "yellow", "green"];
+      function update () {
+          // очистить ранее добавленные классы
+          $( ".fish" ).removeClass( "pink yellow green" );
+          // console.log('bag');
+          // циклически добавить случайный класс
+          $('.fish').each( function(index) {
+              $( this ).addClass( colors [Math.floor(Math.random() * colors.length)] );
+          });
+      }
+
+      // вызывать функцию каждые 1.5 сек
+      setInterval(update, 1500);
+  });
   $(document).ready(function(){
 	$("color").click(function(cursor){
 		$(this).addClass("black");
@@ -31,7 +31,7 @@
     </script>
   </head>
   <body>
-  
+
     <!-- кнопки -->
     <div class="conteiner">
       <div class="menu">
