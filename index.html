@@ -8,28 +8,107 @@
     <script type="text/javascript">
 
     $(document).ready(function() {
+      $("color").click(function(cursor){
+          console.log("CURSOR?");
+          $(this).addClass("black");
+      });
+
       let colors = ["pink", "yellow", "white", "green", "white"];
       function update () {
-          $( ".fish" ).removeClass( "pink yellow green white" );
-          $('.fish').each( function(index) {
+          $(".fish").removeClass("pink yellow green white");
+          $(".fish").each( function(index) {
               $( this ).addClass( colors [Math.floor(Math.random() * colors.length)] );
           });
       }
       update();
       setInterval(update, 500);
-  });
 
-  $(document).ready(function(){
-	$("color").click(function(cursor){
-		$(this).addClass("black");
-	});
-});
+      function* getLoop(arr) {
+        var index = 0;
+        while (true) {
+          if (index == arr.length) {
+            index = 0;
+          }
+          yield arr[index];
+          index += 1;
+        }
+      }
+
+      class ButtonState {
+        constructor() {
+            this.colorsLoop = getLoop([null, "#95C11F", "#E72174", "#FAB334", "white", "red", "green", "blue", "yellow"]);
+            this.colors2Loop = getLoop([null, "white"]);
+            this.maskLoop = getLoop([null, "volos1.svg", "volos2.svg", "volos3.svg", "volos4.svg"]);
+
+            this.color = this.colorsLoop.next().value
+            this.color2 = this.colors2Loop.next().value
+            this.mask = this.maskLoop.next().value
+        }
+        drawButton(button) {
+          let color = (this.color === null) ? "#8B8B8B" : this.color;
+          $(button).css("background-color", color);
+        }
+        draw(element) {
+            if (this.color !== null) {
+                $(element).css("background-color", this.color);
+            }
+            if (this.mask !== null) {
+                $(element).css("-webkit-mask", "https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.mask);
+            }
+        }
+        brushButton(button) {
+          let color2 = (this.color2 === null) ? "#8B8B8B" : this.color2;
+          $(button).css("background-color", color2);
+        }
+        // brush(element) {
+        //
+            // $(".classname").css("-webkit-mask", "https://..../" + this.mask);
+        // }
+        changeColor() {
+            this.color = this.colorsLoop.next().value
+            console.log("SET", this.color)
+        }
+        changeColor2() {
+            this.color2 = this.colors2Loop.next().value
+            console.log("SET", this.color2)
+        }
+      }
+      state = new ButtonState();
+      $(".btn").on("click", function(event) {
+        console.log("TRACE", event.target.className);
+      });
+      $(".btn.color").on("click", function(event) {
+        state.changeColor();
+        state.drawButton(this);
+      });
+      $(".btn.brush, .btn.cut, .btn.lupa").on("click", function(event) {
+        state.changeColor2();
+        state.brushButton(this);
+      });
+      $(".volos").on("click", function() {
+        console.log("clicked", this);
+        state.draw(this);
+        // state.brush(this);
+        console.log("change mask", this.mask)
+      });
+
+    });
+
     </script>
   </head>
   <body>
   <div class="main">
-    <div class="text">
-      <h2> Помоги рыбкам создать уникальный образ на ногах – собери свою первую причёску!</h2>
+    <div class="text t1">
+      <h2>Помоги рыбкам создать уникальный образ на ногах – собери свою первую причёску!</h2>
+    </div>
+    <div class="text t2">
+      <h2>Гарра Руфа – что это за вид рыб?</h2>
+    </div>
+    <div class="text t3">
+      <h3>Гарра Руфа – рыбка, которая относится к семейству карповых. В длину она достигает не более 10 см, не имеет зубов, зато обладает очень сильными губами. </h2>
+    </div>
+    <div class="text t4">
+      <h3>Не стоит переживать, так как прокусить человеческую кожу рыбкам не под силу.</h2>
     </div>
 
     <!-- кнопки -->
@@ -42,11 +121,6 @@
         <div class="btn zlo"></div>
       </div>
     </div>
-    <!-- ноги -->
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
-    <div class="foot"></div>
 
     <!-- волосы -->
     <div class="hair_conteiner_main">
@@ -58,25 +132,90 @@
           <div class="volos v4"></div>
           <div class="volos v4"></div>
           <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
         </div>
-        <div class="hair h2"></div>
+        <div class="hair h2">
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+        </div>
       </div>
       <div class="hair_conteiner">
-        <div class="hair h3"></div>
-        <div class="hair h4"></div>
+        <div class="hair h3">
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+        </div>
+        <div class="hair h4">
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+        </div>
       </div>
       <div class="hair_conteiner">
-        <div class="hair h5"></div>
-        <div class="hair h6"></div>
+        <div class="hair h5">
+          <div class="volos v1"></div>
+          <div class="volos v1"></div>
+          <div class="volos v1"></div>
+          <div class="volos v1"></div>
+          <div class="volos v1"></div>
+        </div>
+        <div class="hair h6">
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+          <div class="volos v2"></div>
+        </div>
       </div>
       <div class="hair_conteiner">
-        <div class="hair h7"></div>
-        <div class="hair h8"></div>
+        <div class="hair h7">
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+          <div class="volos v3"></div>
+        </div>
+        <div class="hair h8">
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+          <div class="volos v4"></div>
+        </div>
       </div>
     </div>
+    <!-- ноги -->
+    <div class="foot"></div>
+    <div class="foot"></div>
+    <div class="foot"></div>
+    <div class="foot"></div>
 
     <!-- рыбки -->
-    <div style="position:absolute;width:100%;height:100%;top: 0;overflow:hidden;">
+  <div class="overflow_wrapper">
       <div class="fish fish1 f1"></div>
       <div class="fish fish2 f2"></div>
       <div class="fish fish3 f3"></div>

@@ -1,6 +1,6 @@
 @import 'reset.css';
 @font-face {
-    font-family: "cyntho next";
+    font-family: "cyntho next bold";
     src: url("fonts/CynthoNext-Bold.ttf") format('truetype');
     font-style: normal;
     font-weight: normal;
@@ -14,11 +14,15 @@
 body{
   background-color: black;
 }
-.h2{
+h2{
+  color: white;
+  font-size: 30px;
+  font-family: 'cyntho next bold';
+}
+h3{
   color: white;
   font-size: 30px;
   font-family: 'cyntho next';
-
 }
 .main {
   height: auto;
@@ -26,11 +30,24 @@ body{
 }
 .text{
   position: absolute;
-  left: 10%;
-  top: 10%;
+  left: 5%;
   width: 30%;
   padding-bottom: 10%;
 }
+.t1{
+  top: 3%;
+  }
+.t2{
+    top: 10%;
+  }
+.t3{
+    top: 20%;
+  }
+.t4{
+    top: 50%;
+  }
+
+
 /* кнопки */
 .conteiner{
   position: absolute;
@@ -59,7 +76,7 @@ body{
 
 .lupa{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20lupa.svg') top left / cover;
-  background-color: white;
+  background-color:#8B8B8B;
 }
 .color{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20color.svg') top left / cover;
@@ -82,7 +99,6 @@ body{
   position: relative;
   left: 60%;
   width: 10%;
-  /* height: 600px; */
   padding-bottom: 70%;
   background-image: url('images/foot1.svg');
   background-size: 100% 100%;
@@ -95,8 +111,6 @@ body{
   top: 0;
   width: 30%;
   height: 100%;
-  /* background-color: #34e357;
-  opacity: .5; */
 
 }
 .hair_conteiner{
@@ -104,18 +118,14 @@ body{
   width: 100%;
   margin-top: 58%;
   padding-bottom: 170%;
-  /* background-color: #362654;
-  opacity: .2; */
 }
 .h_c1{
 margin-top: 16%;
 }
 .hair{
   position: absolute;
-  background-color: white;
   width: 50%;
   padding-bottom: 100%;
-  opacity: .2;
 }
 .h1{
    top: 0%;
@@ -126,19 +136,19 @@ margin-top: 16%;
    left: 0%;
 }
 .h3{
-   top: 10%;
+   top: 5%;
    left: 0%;
 }
 .h4{
-   top: 40%;
+   top: 30%;
    left: 50%;
 }
 .h5{
-   top: 40%;
+   top: 6%;
    left: 0%;
 }
 .h6{
-   top: 0%;
+   top: 10%;
    left: 50%;
 }
 .h7{
@@ -151,13 +161,40 @@ margin-top: 16%;
 }
 .volos{
   position: relative;
+  top: auto;
+  background-color: white;
+}
+.v1{
+  margin-top: -15%;
   width: 100%;
-  padding-bottom: 10%;
+  padding-bottom: 90%;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/volos1.svg') top left / cover;
+}
+.v2{
+  margin-top: -35%;
+  width: 100%;
+  padding-bottom: 90%;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/volos2.svg') top left / cover;
+}
+.v3{
+    width: 94%;
+    padding-bottom: 25%;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/volos3.svg') top left / cover;
 }
 .v4{
-  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
+  width: 90%;
+  padding-bottom: 33%;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/volos4.svg') top left / cover;
 }
 /* рыбки */
+.overflow_wrapper {
+  position: absolute;
+  width: 100%;
+  height:100%;
+  top: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
 @keyframes move1 {
   0%{left: -20%;}
   50%{left: 40%;}
