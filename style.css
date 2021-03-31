@@ -59,7 +59,7 @@ body{
 }
 
 .lupa{
-
+  -webkit-mask: url('') top left / cover;
 }
 .color{
 
