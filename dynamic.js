@@ -87,7 +87,9 @@ $(document).ready(function() {
   $(".btn.zlo").on("click", function(event) {
     drawButton(this, state.zlo.next());
     $("body").css("background-color", state.zlo.get());
-    $(".btn").remove();
+    $(".btn, .zlo_fon, .btn_fon, .text, .podval").remove();
+    // $(".fish").removeClass("fish1 fish2 fish3 fish4");
+    $(".fish").addClass("zlofish");
   });
 
   $(".volos").on("click", function() {

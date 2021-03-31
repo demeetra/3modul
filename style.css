@@ -257,6 +257,11 @@ margin-top: 16%;
   width: 13%;
   padding-bottom: 9%;
 }
+.zlofish{
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/zlofish.svg') top left / cover;
+  width: 13%;
+  padding-bottom: 9%;
+}
 .f1{top: 10%;}
 .f2{top: 18%;}
 .f3{top: 22%;}
