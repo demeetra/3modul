@@ -123,46 +123,22 @@ h3{
 margin-top: 16%;
 }
 .hair{
+  top: 10%;
   position: absolute;
   width: 50%;
   padding-bottom: 100%;
 }
-.h1{
-   top: 0%;
+.h1, .h4, .h6, .h8{
    left: 50%;
 }
-.h2{
-   top: 30%;
+.h2, .h3, .h5, .h7{
    left: 0%;
-}
-.h3{
-   top: 5%;
-   left: 0%;
-}
-.h4{
-   top: 30%;
-   left: 50%;
-}
-.h5{
-   top: 6%;
-   left: 0%;
-}
-.h6{
-   top: 10%;
-   left: 50%;
-}
-.h7{
-   top: 0%;
-   left: 0%;
-}
-.h8{
-   top: 40%;
-   left: 50%;
 }
 .volos{
   position: relative;
   top: auto;
   background-color: white;
+  visibility : visible;
 }
 .v1{
   margin-top: -15%;
