@@ -38,11 +38,12 @@
         constructor() {
             this.colorsLoop = getLoop([null, "#95C11F", "#E72174", "#FAB334", "white", "red", "green", "blue", "yellow"]);
             this.colors2Loop = getLoop([null, "white"]);
-            this.maskLoop = getLoop([null, "volos1.svg", "volos2.svg", "volos3.svg", "volos4.svg"]);
+            // this.maskLoop = getLoop([null, "volos1.svg", "volos2.svg", "volos3.svg", "volos4.svg"]);
+            this.masks = ["volos1.svg", "volos2.svg", "volos3.svg", "volos4.svg"].map(name => "https://raw.githubusercontent.com/demeetra/3modul/main/images/" + name);
 
             this.color = this.colorsLoop.next().value
             this.color2 = this.colors2Loop.next().value
-            this.mask = this.maskLoop.next().value
+            // this.mask = this.maskLoop.next().value
         }
         drawButton(button) {
           let color = (this.color === null) ? "#8B8B8B" : this.color;
@@ -53,7 +54,12 @@
                 $(element).css("background-color", this.color);
             }
             if (this.mask !== null) {
-                $(element).css("-webkit-mask", "https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.mask);
+                // $(element).css("-webkit-mask", "https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.mask);
+                let currentMask = $(element).attr("-webkit-mask");
+                console.log("currentMask", currentMask);
+                let index = this.masks.indexOf(currentMask);
+                let newMask = this.masks[index == this.masks.length ? 0 : index + 1];
+                $(element).css("-webkit-mask", newMask)
             }
         }
         brushButton(button) {
