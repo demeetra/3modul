@@ -51,27 +51,31 @@ body{
 .btn{
   position: relative;
   width: 90%;
-  padding-bottom: 10%;
+  padding-bottom: 90%;
+  margin-top: 5%;
   left: 5%;
   background-size: 100% 100%;
-
-
 }
 
 .lupa{
-  -webkit-mask: url('') top left / cover;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20lupa.svg') top left / cover;
+  background-color: white;
 }
 .color{
-
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20color.svg') top left / cover;
+  background-color:#8B8B8B;
 }
 .brush{
-
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20brush.svg') top left / cover;
+  background-color:#8B8B8B;
 }
 .cut{
-
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20cut.svg') top left / cover;
+  background-color:#8B8B8B;
 }
 .zlo{
-
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20zlo.svg') top left / cover;
+  background-color:#8B8B8B;
 }
 /* ноги */
 .foot{
@@ -145,7 +149,14 @@ margin-top: 16%;
    top: 40%;
    left: 50%;
 }
-
+.volos{
+  position: relative;
+  width: 100%;
+  padding-bottom: 10%;
+}
+.v4{
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
+}
 /* рыбки */
 @keyframes move1 {
   0%{left: -20%;}
@@ -184,7 +195,7 @@ margin-top: 16%;
 .white{
   background-color:white;
 }
-.fish{
+.fish1{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
   animation: move1 10s infinite linear;
   width: 14%;
@@ -198,13 +209,13 @@ margin-top: 16%;
     padding-bottom: 9%;
 }
 .fish3{
-    -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish3.svg') top left / cover;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish3.svg') top left / cover;
   animation: move3 8s infinite linear;
   width: 11%;
   padding-bottom: 9%;
 }
 .fish4{
-    -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish4.svg') top left / cover;
+  -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish4.svg') top left / cover;
   animation: move4 10s infinite linear;
   width: 13%;
   padding-bottom: 9%;
