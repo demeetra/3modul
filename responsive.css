@@ -1,0 +1,102 @@
+@media only screen and (orientation: portrait) {
+  .conteiner{
+    width: 100%;
+    padding-bottom: 50%;
+    left: 0;
+    top: 0;
+  }
+  .menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 20%;
+    margin-top: 0;
+  }
+  .btn{margin: 0;
+    width: 20%;
+    padding-bottom: 20%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+.text{
+  width: 50%;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.h1, .h4, .h6, .h8{
+   visibility: hidden;
+}
+.hair_conteiner_main{
+  left: 70%;
+}
+.hair_conteiner{
+  position: relative;
+  width: 100%;
+  margin-top: 90%;
+  padding-bottom: 280%;
+}
+.hair{
+  width: 70%;
+  padding-bottom: 100%;
+}
+.foot{
+  left: 72%;
+  width: 40%;
+  padding-bottom: 120%;
+}
+
+    }
+/* @media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
+  h2, h3{
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .text{
+    width: 40%;
+  }
+    }
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  h2, h3{
+    font-size: 15px;
+    line-height: 20px;
+  }
+    } */
+@media only screen and (min-width: 1024px) and (max-width: 1080px) {
+  h2, h3{
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .text{
+    width: 33%;
+  }
+    }
+@media only screen and (min-width: 1080px) and (max-width: 1280px) {
+  h2, h3{
+    font-size: 18px;
+    line-height: 23px;
+  }
+    }
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+  h2, h3{
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1680px) {
+      h2, h3{
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+@media only screen and (min-width: 1681px) {
+  h2, h3{
+    font-size: 30px;
+    line-height: 35px;
+  }
+.text{
+  width: 33%;
+}
+    }

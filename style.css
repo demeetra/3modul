@@ -16,12 +16,10 @@ body{
 }
 h2{
   color: white;
-  font-size: 30px;
   font-family: 'cyntho next bold';
 }
 h3{
   color: white;
-  font-size: 30px;
   font-family: 'cyntho next';
 }
 .main {
@@ -31,21 +29,13 @@ h3{
 .text{
   position: absolute;
   left: 5%;
-  width: 30%;
+  width: 30.5%;
   padding-bottom: 10%;
 }
-.t1{
-  top: 3%;
-  }
-.t2{
-    top: 10%;
-  }
-.t3{
-    top: 20%;
-  }
-.t4{
-    top: 50%;
-  }
+.t1{top: 3%;}
+.t2{top: 20%;}
+.t3{top: 21%;}
+.t4{top: 50%;}
 
 
 /* кнопки */
@@ -73,7 +63,6 @@ h3{
   left: 5%;
   background-size: 100% 100%;
 }
-
 .lupa{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/btn%20lupa.svg') top left / cover;
   background-color:#8B8B8B;
@@ -103,7 +92,6 @@ h3{
   background-image: url('images/foot1.svg');
   background-size: 100% 100%;
 }
-
 /* волосы */
 .hair_conteiner_main{
   position: absolute;
@@ -111,7 +99,6 @@ h3{
   top: 0;
   width: 30%;
   height: 100%;
-
 }
 .hair_conteiner{
   position: relative;
@@ -130,6 +117,7 @@ margin-top: 16%;
 }
 .h1, .h4, .h6, .h8{
    left: 50%;
+     visibility: visible;
 }
 .h2, .h3, .h5, .h7{
    left: 0%;
@@ -138,7 +126,7 @@ margin-top: 16%;
   position: relative;
   top: auto;
   background-color: white;
-  visibility : visible;
+
 }
 .v1{
   margin-top: -15%;
@@ -171,26 +159,6 @@ margin-top: 16%;
   overflow: hidden;
   pointer-events: none;
 }
-@keyframes move1 {
-  0%{left: -20%;}
-  50%{left: 40%;}
-  100%{left: 120%;}
-}
-@keyframes move2 {
-  0%{left: -20%;}
-  50%{left: 20%;}
-  100%{left: 110%;}
-}
-@keyframes move3 {
-  0%{left: -20%;}
-  50%{left: 30%;}
-  100%{left: 110%;}
-}
-@keyframes move4 {
-  0%{left: -20%;}
-  50%{left: 50%;}
-  100%{left: 110%;}
-}
 .fish{
   position: absolute;
   background-size: 100% 100%;
@@ -208,86 +176,135 @@ margin-top: 16%;
 .white{
   background-color:white;
 }
+.animation1{
+    animation: move1 20s infinite linear;
+}
+.animation2{
+    animation: move2 10s infinite linear;
+}
+.animation3{
+    animation: move3 10s infinite linear;
+}
+.animation4{
+    animation: move4 20s infinite linear;
+}
+.animation5{
+    animation: move5 10s infinite linear;
+}
+.animation6{
+    animation: move6 20s infinite linear;
+}
+.animation7{
+    animation: move7 20s infinite linear;
+}
+@keyframes move1 {
+  0%{left: -30%;}
+  50%{left: 40%;}
+  100%{left: 120%;}
+}
+@keyframes move2 {
+  0%{left: -20%;}
+  50%{left: 20%;}
+  100%{left: 110%;}
+}
+@keyframes move3 {
+  0%{left: -10%;}
+  50%{left: 30%;}
+  100%{left: 110%;}
+}
+@keyframes move4 {
+  0%{left: -10%;}
+  50%{left: 50%;}
+  100%{left: 110%;}
+}
+@keyframes move5 {
+  0%{left: -50%;}
+  50%{left: 70%;}
+  100%{left: 110%;}
+}
+@keyframes move6 {
+  0%{left: -100%;}
+  50%{left: 40%;}
+  100%{left: 110%;}
+}
+@keyframes move7 {
+  0%{left: -40%;}
+  50%{left: 80%;}
+  100%{left: 110%;}
+}
+
 .fish1{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
-  animation: move1 10s infinite linear;
   width: 14%;
   padding-bottom: 9%;
-
 }
 .fish2{
     -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish2.svg') top left / cover;
-    animation: move2 7s infinite linear;
     width: 15.1%;
     padding-bottom: 9%;
 }
 .fish3{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish3.svg') top left / cover;
-  animation: move3 8s infinite linear;
   width: 11%;
   padding-bottom: 9%;
 }
 .fish4{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish4.svg') top left / cover;
-  animation: move4 10s infinite linear;
   width: 13%;
   padding-bottom: 9%;
 }
-.f1{
-  top: 30%;
-}
-.f2{
-  top: 50%;
-}
-.f3{
-  top: 60%;
-}
-.f4{
-  top: 100%;
-}
-.f5{
-  top: 10%;
-}
-.f6{
-  top: 70%;
-}
-.f7{
-  top: 90%;
-}
-.f8{
-  top: 78%;
-}
-.f9{
-  top: 80%;
-}
-.f10{
-  top: 85%;
-}
-.f11{
-  top: 90%;
-}
-.f12{
-  top: 94%;
-}
-.f13{
-  top: 10%;
-}
-.f14{
-  top: 90%;
-}
+.f1{top: 30%;}
+.f2{top: 50%;}
+.f3{top: 60%;}
+.f4{top: 34%;}
+.f5{top: 10%;}
+.f6{top: 70%;}
+.f7{top: 90%;}
+.f8{top: 78%;}
+.f9{top: 80%;}
+.f10{top: 85%;}
+.f11{top: 90%;}
+.f12{top: 94%;}
+.f13{top: 13%;}
+.f14{top: 90%;}
+.f15{top: 30%;}
+.f16{top: 50%;}
+.f17{top: 60%;}
+.f18{top: 95%;}
+.f19{top: 15%;}
+.f20{top: 70%;}
+.f21{top: 90%;}
+.f22{top: 78%;}
+.f23{top: 80%;}
+.f24{top: 85%;}
+.f25{top: 90%;}
+.f26{top: 80%;}
+.f27{top: 80%;}
+.f28{top: 80%;}
+.f29{top: 80%;}
+.f30{top: 80%;}
+.f31{top: 80%;}
+.f32{top: 89%;}
+.f33{top: 90%;}
+.f34{top: 91%;}
+.f35{top: 92%;}
+.f36{top: 93%;}
+.f37{top: 94%;}
+.f38{top: 95%;}
+.f39{top: 96%;}
+.f40{top: 97%;}
 /* подвал */
 .dno{
   position: relative;
   width: 100%;
-  height: 100px;
+  padding-bottom: 10%;
   background-image: url('images/dno.svg');
   background-size: 100% 100%;
 }
 .octopus{
   position: relative;
   width: 60%;
-  height: 400px;
+  padding-bottom: 40%;
   background-image: url('images/octopus.svg');
   background-size: 100% 100%;
-
 }

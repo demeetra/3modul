@@ -4,24 +4,25 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript">
 
     $(document).ready(function() {
-      $("color").click(function(cursor){
-          console.log("CURSOR?");
-          $(this).addClass("black");
-      });
+
 
       let colors = ["pink", "yellow", "white", "green", "white"];
+      let animation = ["animation1", "animation2", "animation3", "animation4", "animation5", "animation6", "animation7"];
       function update () {
           $(".fish").removeClass("pink yellow green white");
+          $(".fish").removeClass("animation1 animation2 animation3 animation4 animation5 animation6 animation7");
           $(".fish").each( function(index) {
               $( this ).addClass( colors [Math.floor(Math.random() * colors.length)] );
+              $( this ).addClass( animation [Math.floor(Math.random() * animation.length)] );
           });
       }
       update();
-      setInterval(update, 500);
+      // setInterval (update, 10000);
 
       function* getLoop(arr) {
         var index = 0;
@@ -38,9 +39,11 @@
         constructor() {
             this.colorsLoop = getLoop([null, "#95C11F", "#E72174", "#FAB334", "white", "red", "green", "blue", "yellow"]);
             this.colors2Loop = getLoop([null, "white"]);
+            this.colors3Loop = getLoop([null, "red"]);
             this.masks = ["v2", "v3", "v4"];
             this.color = this.colorsLoop.next().value
             this.color2 = this.colors2Loop.next().value
+            this.color3 = this.colors3Loop.next().value
         }
         drawButton(button) {
           let color = (this.color === null) ? "#8B8B8B" : this.color;
@@ -48,6 +51,10 @@
         }
         brushButton(button) {
           let color = (this.color2 === null) ? "#8B8B8B" : this.color2;
+          $(button).css("background-color", color);
+        }
+        zloButton(button) {
+          let color = (this.color3 === null) ? "#8B8B8B" : this.color3;
           $(button).css("background-color", color);
         }
         draw(element) {
@@ -66,6 +73,12 @@
               }
             }
         }
+        // zlo(".btn.zlo") {
+        //     if (this.color3 !== null) {
+        //         $(body).css("background-color", this.color3);
+        //     }
+        // }
+
 
         changeColor() {
             this.color = this.colorsLoop.next().value
@@ -74,6 +87,10 @@
         changeColor2() {
             this.color2 = this.colors2Loop.next().value
             console.log("SET", this.color2)
+        }
+        changeColor3() {
+            this.color3 = this.colors3Loop.next().value
+            console.log("SET", this.color3)
         }
       }
       state = new ButtonState();
@@ -88,6 +105,10 @@
         state.changeColor2();
         state.brushButton(this);
       });
+      $(".btn.zlo").on("click", function(event) {
+        state.changeColor3();
+        state.zloButton(this);
+      });
       $(".volos").on("click", function() {
         console.log("clicked", this);
         state.draw(this);
@@ -101,16 +122,16 @@
   <body>
   <div class="main">
     <div class="text t1">
-      <h2>Помоги рыбкам создать уникальный образ на ногах – собери свою первую причёску!</h2>
+      <h2>Помоги рыбкам создать уникальный образ на&nbsp;ногах – собери свою первую причёску!</h2>
     </div>
     <div class="text t2">
       <h2>Гарра Руфа – что это за вид рыб?</h2>
     </div>
     <div class="text t3">
-      <h3>Гарра Руфа – рыбка, которая относится к семейству карповых. В длину она достигает не более 10 см, не имеет зубов, зато обладает очень сильными губами. </h2>
+      <h3>Гарра Руфа – рыбка, которая относится к&nbsp;семейству карповых. В длину она достигает не более 10 см, не имеет зубов, зато обладает очень сильными губами. </h2>
     </div>
     <div class="text t4">
-      <h3>Не стоит переживать, так как прокусить человеческую кожу рыбкам не под силу.</h2>
+      <h3>Не стоит переживать, так&nbsp;как&nbsp;прокусить человеческую кожу рыбкам не под силу.</h2>
     </div>
 
     <!-- кнопки -->
@@ -228,6 +249,32 @@
       <div class="fish fish1 f12"></div>
       <div class="fish fish2 f13"></div>
       <div class="fish fish3 f14"></div>
+      <div class="fish fish1 f15"></div>
+      <div class="fish fish2 f16"></div>
+      <div class="fish fish3 f17"></div>
+      <div class="fish fish4 f18"></div>
+      <div class="fish fish1 f19"></div>
+      <div class="fish fish2 f20"></div>
+      <div class="fish fish3 f21"></div>
+      <div class="fish fish1 f22"></div>
+      <div class="fish fish2 f23"></div>
+      <div class="fish fish3 f24"></div>
+      <div class="fish fish4 f25"></div>
+      <div class="fish fish1 f26"></div>
+      <div class="fish fish2 f27"></div>
+      <div class="fish fish3 f28"></div>
+      <div class="fish fish1 f29"></div>
+      <div class="fish fish2 f30"></div>
+      <div class="fish fish3 f31"></div>
+      <div class="fish fish4 f32"></div>
+      <div class="fish fish1 f33"></div>
+      <div class="fish fish2 f34"></div>
+      <div class="fish fish3 f35"></div>
+      <div class="fish fish1 f36"></div>
+      <div class="fish fish2 f37"></div>
+      <div class="fish fish3 f38"></div>
+      <div class="fish fish4 f39"></div>
+      <div class="fish fish1 f40"></div>
     </div>
   </div>
 
