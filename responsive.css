@@ -1,69 +1,79 @@
 @media only screen and (orientation: portrait) {
   .conteiner{
+    position: fixed;
     width: 100%;
-    padding-bottom: 50%;
+    padding-bottom: 20%;
     left: 0;
     top: 0;
   }
   .menu{
-    position: fixed;
+    position:absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding-bottom: 20%;
     margin-top: 0;
   }
-  .btn{margin: 0;
-    width: 20%;
-    padding-bottom: 20%;
+  .btn{
+    display: inline-block;
+    margin: 0;
+    width: 19.5%;
+    padding-bottom: 19.6%;
     position: relative;
     top: 0;
     left: 0;
   }
 .text{
-  width: 50%;
+  width: 40%;
   font-size: 16px;
   line-height: 21px;
 }
-
+.t1{
+  top: 6%;
+}
 .h1, .h4, .h6, .h8{
    visibility: hidden;
 }
 .hair_conteiner_main{
-  left: 70%;
+  left: 65%;
 }
 .hair_conteiner{
   position: relative;
   width: 100%;
   margin-top: 90%;
-  padding-bottom: 280%;
+  padding-bottom: 400%;
 }
 .hair{
   width: 70%;
   padding-bottom: 100%;
 }
 .foot{
-  left: 72%;
+  left: 70%;
   width: 40%;
-  padding-bottom: 120%;
+  padding-bottom: 145%;
 }
-
+.zlo_fon{
+  position: fixed;
+  top: 0;
+  left: 79.5%;
+  width: 19.5%;
+  padding-bottom: 19.5%;
+  background-color: black;
+  border-radius: 50%;
     }
-/* @media only screen and (min-width: 320px) and (max-width: 768px) and (orientation: portrait) {
-  h2, h3{
-    font-size: 14px;
-    line-height: 19px;
-  }
-  .text{
-    width: 40%;
-  }
+  .btn_fon{
+      position: fixed;
+      top: 0;
+      left: 0%;
+      width: 79.5%;
+      padding-bottom: 19.5%;
+      background-color: black;
+        }
     }
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
-  h2, h3{
-    font-size: 15px;
-    line-height: 20px;
-  }
-    } */
+    .octopus{
+      width: 80%;
+      padding-bottom: 60%;
+    }
 @media only screen and (min-width: 1024px) and (max-width: 1080px) {
   h2, h3{
     font-size: 17px;
