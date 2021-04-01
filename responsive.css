@@ -18,8 +18,8 @@
   .btn{
     display: inline-block;
     margin: 0;
-    width: 19.5%;
-    padding-bottom: 19.6%;
+    width: 19.4%;
+    padding-bottom: 19.4%;
     position: relative;
     top: 0;
     left: 0;
@@ -53,20 +53,12 @@
   width: 20%;
   padding-bottom: 140%;
 }
-.zlo_fon{margin-left: .45%;
-  position: fixed;
-  top: 0;
-  left: 79.5%;
-  width: 19.5%;
-  padding-bottom: 19.5%;
-  background-color: black;
-  border-radius: 50%;
-    }
+
   .btn_fon{
       position: fixed;
       top: 0;
       left: 0%;
-      width: 79.5%;
+      width: 100%;
       padding-bottom: 19.5%;
       background-color: black;
         }
