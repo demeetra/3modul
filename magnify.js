@@ -1,7 +1,8 @@
 function startMagnify() {
   $(".magnify_glass").css("visibility", "visible");
-  var scaleNum = 2;
   $(".magnify").jfMagnify();
+  $(".magnified_element>.foot").css("background-image", "url('images/foot_lupa.svg')");
+  var scaleNum = 2;
   $(".magnify").data("jfMagnify").scaleMe(1 + scaleNum * 0.5);
   $('.plus').click(function(){
     scaleNum += 1;
