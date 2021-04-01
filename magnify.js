@@ -1,3 +1,6 @@
+// https://github.com/fonstok/jfMagnify
+// https://codepen.io/fonstok/pen/reLmOJ
+
 function startMagnify() {
   $(".magnify_glass").css("visibility", "visible");
   $(".magnify").jfMagnify();
@@ -19,8 +22,8 @@ function startMagnify() {
     $(".magnify").data("jfMagnify").scaleMe(1 + scaleNum * 0.5);
   });
   $('.magnify_glass').animate({
-    'top':'7.5%',
-    'left':'67%'
+    'top': window.scrollY + 0.475 * window.screen.height + 'px',
+    'left': window.scrollX + 0.67 * $(".magnify").width() + 'px'
     },{
     duration: 2000,
     progress: function(){
