@@ -198,69 +198,20 @@ margin-top: 16%;
 .white{
   background-color:white;
 }
-.animation1{
-    animation: move1 20s infinite linear;
-}
-.animation2{
-    animation: move2 10s infinite linear;
-}
-.animation3{
-    animation: move3 10s infinite linear;
-}
-.animation4{
-    animation: move4 20s infinite linear;
-}
-.animation5{
-    animation: move5 10s infinite linear;
-}
-.animation6{
-    animation: move6 20s infinite linear;
-}
-.animation7{
-    animation: move7 20s infinite linear;
+
+@keyFrames moveFish {
+  0%   {transform: translateX(   0);}
+  50%  {transform: translateX(100vw);}
+  50.00001%  {transform: translateX(-100vw);}
+  100% {transform: translateX(   0);}
 }
 
+@keyFrames moveFishPhantom {
+  0%   {transform: translateX(   0);}
+  50%  {transform: translateX(100vw);}
+  100% {transform: translateX(200vw);}
+}
 
-
-@keyframes move1 {
-  0%{left: -20%;}
-  50%{left: 40%;}
-  100%{left: 120%;}
-}
-@keyframes move2 {
-  0%{left: -50%;}
-  50%{left: 20%;}
-  100%{left: 110%;}
-}
-@keyframes move3 {
-  0%{left: -80%;}
-  50%{left: 60%;}
-  100%{left: 110%;}
-}
-@keyframes move4 {
-  0%{left: -30%;}
-  50%{left: 50%;}
-  100%{left: 110%;}
-}
-@keyframes move5 {
-  0%{left: -50%;}
-  50%{left: 70%;}
-  100%{left: 110%;}
-}
-@keyframes move6 {
-  0%{left: -100%;}
-  50%{left: 10%;}
-  100%{left: 110%;}
-}
-@keyframes move7 {
-  0%{left: -20%;}
-  50%{left: 10%;}
-  100%{left: 110%;}
-}
-@keyframes zlo {
-  0%{left: -20%;}
-  100%{left: 110%;}
-}
 .fish1{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/fish1.svg') top left / cover;
   width: 14%;
@@ -294,71 +245,6 @@ margin-top: 16%;
   padding-bottom: 18.5%;
   z-index: 1;
 }
-.f1{top: 10%;}
-.f2{top: 18%;}
-.f3{top: 22%;}
-.f4{top: 25%;}
-.f5{top: 35%;}
-.f6{top: 37%;}
-.f7{top: 38%;}
-.f8{top: 41%;}
-.f9{top: 45%;}
-.f10{top: 46%;}
-.f11{top: 50%;}
-.f12{top: 52%;}
-.f13{top: 58%;}
-.f14{top: 60%;}
-.f15{top: 70%;}
-.f16{top: 71%;}
-.f17{top: 78%;}
-.f18{top: 80%;}
-.f19{top: 65%;}
-.f20{top: 69%;}
-.f21{top: 75%;}
-.f22{top: 78%;}
-.f23{top: 80%;}
-.f24{top: 85%;}
-.f25{top: 90%;}
-.f26{top: 80%;}
-.f27{top: 80%;}
-.f28{top: 80%;}
-.f29{top: 80%;}
-.f30{top: 80%;}
-.f31{top: 80%;}
-.f32{top: 89%;}
-.f33{top: 90%;}
-.f34{top: 91%;}
-.f35{top: 92%;}
-.f36{top: 93%;}
-.f37{top: 94%;}
-.f38{top: 95%;}
-.f39{top: 96%;}
-.f40{top: 97%;}
-.f20{top: 69%;}
-.f21{top: 75%;}
-.f22{top: 78%;}
-.f23{top: 80%;}
-.f24{top: 85%;}
-.f25{top: 90%;}
-.f26{top: 80%;}
-.f27{top: 80%;}
-.f28{top: 80%;}
-.f29{top: 80%;}
-.f30{top: 80%;}
-.f31{top: 80%;}
-.f32{top: 89%;}
-.f33{top: 90%;}
-.f34{top: 91%;}
-.f35{top: 92%;}
-.f36{top: 93%;}
-.f37{top: 94%;}
-.f38{top: 95%;}
-.f39{top: 96%;}
-.f40{top: 97%;}
-.f41{top: 80%;}
-.f42{top: 85%;}
-.f43{top: 95%;}
-
 .game_over{
   visibility: hidden;
   text-align: center;

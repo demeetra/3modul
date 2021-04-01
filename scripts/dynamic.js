@@ -1,11 +1,33 @@
 $(document).ready(function() {
-  function setAnimation() {
-    let animation = ["animation1", "animation2", "animation3", "animation4", "animation5", "animation6", "animation7"];
-    $(".fish").each( function(index) {
-        $(this).addClass(animation[Math.floor(Math.random() * animation.length)]);
-    });
-  };
-  setAnimation();
+  function randInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function addFish(cls, top, left, time, withPhantom=true) {
+    let elClass = "fish " + "fish" + cls;
+    let elPos = "top:" + top + "%; left:" + left + "%;"
+    let elAnim = "animation: moveFish " + time + "s infinite linear;"
+    $(".overflow_wrapper").append('<div class="' + elClass + '" style="' + elPos + elAnim + '"></div>')
+    let elPosPh = "top:" + top + "%; left:" + (left - 100) + "%;"
+    if (!withPhantom)
+      return;
+    let elAnimPh = "animation: moveFishPhantom " + time + "s infinite linear;"
+    $(".overflow_wrapper").append('<div class="' + elClass + '" style="' + elPosPh + elAnimPh + '"></div>')
+  }
+
+  for (let start = 1; start < 11; start++) {
+    addFish(randInt(1, 4), start*5 + randInt(-5, 5), randInt(0, 100), randInt(10, 20));
+  }
+  for (let start = 11; start < 20; start++) {
+    for (let i=0; i< start/2 + (start/4)*(start/4)/2; i++) {
+      addFish(randInt(1, 4), start*5 + randInt(-5, 5), randInt(0, 100), randInt(10, 20));
+    }
+  }
+  addFish(5, 70, randInt(0, 10), randInt(10, 20), false);
+  addFish(5, 75, randInt(10, 20), randInt(10, 20), false);
+  addFish(5, 90, randInt(30, 40), randInt(10, 20), false);
 
   function updateColor(selector, interval) {
     let colors = ["pink", "yellow", "white", "green", "white"];
@@ -17,9 +39,11 @@ $(document).ready(function() {
       });
     };
     update();
-    setInterval(update, interval);
+    if (interval == 0) {
+      setInterval(update, interval);
+    }
   }
-  updateColor(".fish", 1000);
+  updateColor(".fish", 2000);
   updateColor(".fish5", 0);
 
   class Button {
