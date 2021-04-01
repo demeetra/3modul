@@ -185,7 +185,6 @@ margin-top: 16%;
 .fish{
   position: absolute;
   background-size: 100% 100%;
-  background-color: black;
 }
 .pink{
   background-color:#E72174;
@@ -372,6 +371,14 @@ margin-top: 16%;
 p{
   cursor: pointer;
 }
+button{
+  background-color: red;
+  border-color: white;
+  font-family: 'cyntho next';
+  color: white;
+  font-size: 30px;
+
+}
 /* подвал */
 .dno{
   position: relative;
@@ -380,10 +387,66 @@ p{
   background-image: url('images/dno.svg');
   background-size: 100% 100%;
 }
+.podval_octopus{
+  position: relative;
+  width: auto;
+  height: auto;
+}
 .octopus{
   position: relative;
   width: 40%;
   padding-bottom: 30%;
   background-image: url('images/octopus.svg');
   background-size: 100% 100%;
+}
+
+.bubble_fish{
+  position: absolute;
+  top: 90%;
+  left: 30%;
+  background-image: url("images/bubble_fish.svg");
+  background-size: 100% 100%;
+  width: 40%;
+  padding-bottom: 20%;
+}
+.buble_octopus{
+  position:absolute;
+  width: 30%;
+  padding-bottom: 20%;
+  top: 50%;
+  left: 50%;
+  background-image: url('images/buble_octopus.svg');
+  background-size: 100% 100%;
+}
+.podval_logo{
+  position: absolute;
+  top: 86%;
+  left: 0;
+  width: 100%;
+  padding-bottom: 8%;
+}
+.logo{
+  position: absolute;
+  top: 0%;
+  background-size: 100% 100%;
+}
+.adc{
+  top: -5%;
+  left: 35%;
+  width: 10%;
+  padding-bottom: 7%;
+  background-image: url("images/adc.svg");
+}
+.name{
+  vertical-align: bottom;
+  left: 50%;
+  width: 30%;
+  padding-bottom: 2%;
+  font-size: 150%;
+}
+.logotip{
+  left: 85%;
+  width: 10%;
+  padding-bottom: 7%;
+  background-image: url("images/logo.svg");
 }
