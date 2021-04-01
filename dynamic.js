@@ -21,18 +21,20 @@ $(document).ready(function() {
 
 
   class Button {
-    constructor(name, defaultColor, colors, eSet=null, eUnSet=null) {
+    constructor(name, defaultColor, colors, eSet=null, eUnSet=null, useCursor=true) {
       this.name = name
       this.selector = ".btn." + name
       this.colors = [defaultColor].concat(colors);
       this.index = 0;
       this.eSet = eSet === null ? () => null : eSet;
       this.eUnSet = eUnSet === null ? () => null : eUnSet;
+      this.useCursor = useCursor
     }
     unSet() {
       this.index = 0;
       $(this.selector).css("background-color", this.get());
-      $("body").css("cursor", "auto");
+      if (this.useCursor)
+        $("body").css("cursor", "auto");
       this.eUnSet();
     }
     isSet() {
@@ -52,7 +54,8 @@ $(document).ready(function() {
       this.next();
       if (this.isSet()) {
         $(button).css("background-color", this.get());
-        $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.name + "_cursor.svg'), auto");
+        if (this.useCursor)
+          $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.name + "_cursor.svg'), auto");
         this.eSet();
         return true;
       }
@@ -66,7 +69,7 @@ $(document).ready(function() {
         this.color = new Button("color", "#8B8B8B", ["#95C11F", "#E72174", "#FAB334", "white", "red", "green", "blue", "yellow"]);
         this.brush = new Button("brush", "#8B8B8B", ["white"])
         this.cut = new Button("cut", "#8B8B8B", ["white"])
-        this.lupa = new Button("lupa", "#8B8B8B", ["white"], startMagnify, stopMagnify)
+        this.lupa = new Button("lupa", "#8B8B8B", ["white"], startMagnify, stopMagnify, false)
         this.all = [this.color, this.brush, this.cut, this.lupa]
     }
     draw(element) {
@@ -118,7 +121,7 @@ $(document).ready(function() {
       $("body").css("background-color", "red");
     }, 1500);
     setTimeout(function () {
-      $(".btn, .zlo_fon, .btn_fon, .text, .podval").remove();
+      $(".btn, .zlo_fon, .btn_fon, .text, .podval, .magnify_glass").remove();
       $(".fish").removeClass("fish1 fish2 fish3 fish4");
       $(".fish").addClass("zlofish");
     }, 500);
