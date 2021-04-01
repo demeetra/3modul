@@ -48,7 +48,7 @@ h4{
 
 /* кнопки */
 .brush_cursor{
-cursor: url('https://github.com/demeetra/3modul/blob/main/images/color_cursor.png?raw=true');
+cursor: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/color_cursor.svg'), auto;
 }
 .color_cursor{
 

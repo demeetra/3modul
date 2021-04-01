@@ -46,6 +46,8 @@ $(document).ready(function() {
             return;
         }
         if (this.color.isSet()) {
+            $(".color_cursor").css("background-color", this.color.get());
+            console.log("color");
             $(element).css("background-color", this.color.get());
         }
         if (this.brush.isSet()){
@@ -73,6 +75,7 @@ $(document).ready(function() {
     $(button).css("background-color", color);
   }
   $(".btn.color").on("click", function(event) {
+    $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/color_cursor.svg'), auto");
     drawButton(this, state.color.next());
   });
   $(".btn.brush").on("click", function(event) {
@@ -104,7 +107,7 @@ $(document).ready(function() {
     setTimeout(function () {
       $(".game_over").css("visibility", "visible");
     }, 3000);
-  
+
 
   });
 
