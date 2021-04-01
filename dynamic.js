@@ -88,10 +88,14 @@ $(document).ready(function() {
   $(".btn.cut").on("click", function(event) {
       $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/cut_cursor.svg'), auto");
   });
-  $(".btn.lupa").on("click", function(event) {
-    $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/lupa_cursor.svg'), auto");
-    drawButton(this, state.lupa.next());
+    $(".btn.lupa").on("click", function(event) {
+      $(function() {
+    	   $(".volos").draggable();
+         $(".volos").css("opacity", "1");
+      });
+      $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/lupa_cursor.svg'), auto");
   });
+
   $(".btn.zlo").on("click", function(event) {
     drawButton(this, state.zlo.next());
     setTimeout(function () {
