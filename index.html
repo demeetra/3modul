@@ -5,13 +5,15 @@
     <title>octopus</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="magnify.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="dynamic.js"></script>
+    <script src="jquery.jfMagnify.js"></script>
+    <script src="magnify.js"></script>
   </head>
   <body>
-  <div class="main">
+  <div class="main magnify" data-magnified-zone=".mg_zone">
     <div class="text t1">
       <h2>Помоги рыбкам создать уникальный образ на&nbsp;ногах – собери свою первую причёску!</h2>
     </div>
@@ -25,7 +27,16 @@
       <h3>Не стоит переживать, так&nbsp;как&nbsp;прокусить человеческую кожу рыбкам не под силу.</h2>
     </div>
 
+    <!-- лупа -->
+    <div class="magnify_glass">
+      <div class="mg_ring"></div>
+      <div class="pm_btn plus"><h2>+</h2></div>
+      <div class="pm_btn minus"><h2>-</h2></div>
+      <div class="mg_zone"></div>
+    </div>
+
     <!-- волосы -->
+    <div class="hair_conteiner_wrapper element_to_magnify">
     <div class="hair_conteiner_main">
       <div class="hair_conteiner h_c1">
         <div class="hair h1">
@@ -106,6 +117,7 @@
           <div class="volos v4"></div>
         </div>
       </div>
+    </div>
     </div>
     <!-- ноги -->
     <div class="foot"></div>
