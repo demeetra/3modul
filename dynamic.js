@@ -104,6 +104,8 @@ $(document).ready(function() {
     setTimeout(function () {
       $(".game_over").css("visibility", "visible");
     }, 3000);
+  
+
   });
 
   $(".volos").on("click", function() {

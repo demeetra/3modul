@@ -47,6 +47,18 @@ h4{
 
 
 /* кнопки */
+.brush_cursor{
+cursor: url('images/color_cursor.svg');
+}
+.color_cursor{
+
+}
+.cut_cursor{
+
+}
+.lupa_cursor{
+
+}
 .conteiner{
   position: absolute;
   transform: scale(1);
@@ -358,6 +370,9 @@ margin-top: 16%;
   left: 20%;
   width: 60%;
   padding-bottom: 30%;
+}
+p{
+  cursor: pointer;
 }
 /* подвал */
 .dno{
