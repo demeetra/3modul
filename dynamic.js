@@ -1,24 +1,26 @@
 $(document).ready(function() {
+  function setAnimation() {
+    let animation = ["animation1", "animation2", "animation3", "animation4", "animation5", "animation6", "animation7"];
+    $(".fish").each( function(index) {
+        $(this).addClass(animation[Math.floor(Math.random() * animation.length)]);
+    });
+  };
+  setAnimation();
 
-  let colors = ["pink", "yellow", "white", "green", "white"];
-  let animation = ["animation1", "animation2", "animation3", "animation4", "animation5", "animation6", "animation7"];
-  function updateColor () {
-      $(".fish").removeClass("pink yellow green white");
-      $(".fish").each( function(index) {
+  function updateColor(selector, interval) {
+    let colors = ["pink", "yellow", "white", "green", "white"];
+    let update = function() {
+      let el = $(selector);
+      el.removeClass("pink yellow green white");
+      el.each( function(index) {
           $(this).addClass(colors[Math.floor(Math.random() * colors.length)]);
       });
-      setInterval (updateColor, 1000);
+    };
+    update();
+    setInterval(update, interval);
   }
-  updateColor();
-
-  function update () {
-      $(".fish").removeClass("animation1 animation2 animation3 animation4 animation5 animation6 animation7");
-      $(".fish").each( function(index) {
-          $(this).addClass(animation[Math.floor(Math.random() * animation.length)]);
-      });
-  }
-  update();
-
+  updateColor(".fish", 1000);
+  updateColor(".fish5", 0);
 
   class Button {
     constructor(name, defaultColor, colors, eSet=null, eUnSet=null, useCursor=true) {
@@ -55,7 +57,7 @@ $(document).ready(function() {
       if (this.isSet()) {
         $(button).css("background-color", this.get());
         if (this.useCursor)
-          $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.name + "_cursor.svg'), auto");
+          $("body").css("cursor", "url('images/" + this.name + "_cursor.svg'), auto");
         this.eSet();
         return true;
       }
