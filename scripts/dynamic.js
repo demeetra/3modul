@@ -120,9 +120,6 @@ $(document).ready(function() {
   $(".btn.zlo").on("click", function(event) {
     $(this).css("background-color", "red");
     setTimeout(function () {
-      $("body").css("background-color", "red");
-    }, 1500);
-    setTimeout(function () {
       $(".btn, .zlo_fon, .btn_fon, .text, .podval, .magnify_glass, .bubble_fish").remove();
       $(".fish").removeClass("fish1 fish2 fish3 fish4");
       $(".fish").addClass("zlofish");
@@ -132,6 +129,7 @@ $(document).ready(function() {
     }, 1000);
     setTimeout(function () {
       $(".foot").css("background-image", "url('images/foot_zlo.svg')");
+      $("body").css("background-color", "red");
     }, 2000);
     setTimeout(function () {
       $(".foot").css("opacity", "0");
