@@ -123,7 +123,7 @@ $(document).ready(function() {
       $("body").css("background-color", "red");
     }, 1500);
     setTimeout(function () {
-      $(".btn, .zlo_fon, .btn_fon, .text, .podval, .magnify_glass").remove();
+      $(".btn, .zlo_fon, .btn_fon, .text, .podval, .magnify_glass, .bubble_fish").remove();
       $(".fish").removeClass("fish1 fish2 fish3 fish4");
       $(".fish").addClass("zlofish");
     }, 500);
