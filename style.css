@@ -266,8 +266,8 @@ margin-top: 16%;
 }
 .fish5{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/ugor.svg') top left / cover;
-  width: 13%;
-  padding-bottom: 9%;
+  width: 70%;
+  padding-bottom: 11%;
 }
 .zlofish{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/zlofish.svg') top left / cover;
@@ -337,6 +337,10 @@ margin-top: 16%;
 .f38{top: 95%;}
 .f39{top: 96%;}
 .f40{top: 97%;}
+.f41{top: 80%;}
+.f42{top: 85%;}
+.f43{top: 95%;}
+
 
 /* подвал */
 .dno{
