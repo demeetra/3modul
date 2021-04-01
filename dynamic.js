@@ -20,33 +20,50 @@ $(document).ready(function() {
   update();
 
 
-  class ValuesLoop {
-    constructor(default_, values) {
-        this.values = [default_].concat(values);
-        this.index = 0;
+  class Button {
+    constructor(name, defaultColor, colors, selector) {
+      this.name = name
+      this.selector = ".btn." + name
+      this.colors = [defaultColor].concat(colors);
+      this.index = 0;
+    }
+    unSet() {
+      this.index = 0;
+      $(this.selector).css("background-color", this.get());
+      $("body").css("cursor", "auto");
     }
     isSet() {
-        return this.index > 0;
+      return this.index > 0;
     }
     get() {
-        return this.values[this.index];
+      return this.colors[this.index];
     }
     next() {
-        this.index++;
-        if (this.index >= this.values.length) {
-            this.index = 0;
-        }
-        return this.get();
+      this.index++;
+      if (this.index >= this.colors.length) {
+          this.index = 0;
+      }
+      return this.get();
+    }
+    onClick(button) {
+      this.next();
+      if (this.isSet()) {
+        $(button).css("background-color", this.get());
+        $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/" + this.name + "_cursor.svg'), auto");
+        return true;
+      }
+      this.unSet()
+      return false;
     }
   }
 
   class ButtonPanelState {
     constructor() {
-        this.color = new ValuesLoop("#8B8B8B", ["#95C11F", "#E72174", "#FAB334", "white", "red", "green", "blue", "yellow"]);
-        this.brush = new ValuesLoop("#8B8B8B", ["white"])
-        this.cut = new ValuesLoop("#8B8B8B", ["white"])
-        this.lupa = new ValuesLoop("#8B8B8B", ["white"])
-        this.zlo = new ValuesLoop("#8B8B8B", ["red"])
+        this.color = new Button("color", "#8B8B8B", ["#95C11F", "#E72174", "#FAB334", "white", "red", "green", "blue", "yellow"]);
+        this.brush = new Button("brush", "#8B8B8B", ["white"])
+        this.cut = new Button("cut", "#8B8B8B", ["white"])
+        this.lupa = new Button("lupa", "#8B8B8B", ["white"])
+        this.all = [this.color, this.brush, this.cut, this.lupa]
     }
     draw(element) {
         if ($(element).attr("forceDisabled")) {
@@ -73,61 +90,52 @@ $(document).ready(function() {
           $(element).attr("forceDisabled", true);
         }
     }
+    onClick(element) {
+      let button = this.all.filter(item => $(element).hasClass(item.name))[0];
+      if (!button) {
+        return;
+      }
+      if (!button.isSet()) {
+        this.all.forEach(item => item.unSet());
+      }
+      button.onClick(element);
+    }
   }
 
-  state = new ButtonPanelState();
+  panel = new ButtonPanelState();
 
-  function drawButton(button, color) {
-    $(button).css("background-color", color);
-  }
-  $(".btn.color").on("click", function(event) {
-    $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/color_cursor.svg'), auto");
-    drawButton(this, state.color.next());
-  });
-  $(".btn.brush").on("click", function(event) {
-    $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/brush_cursor.svg'), auto");
-    drawButton(this, state.brush.next());
-  });
-  $(".btn.cut, .btn.lupa").on("click", function(event) {
-    drawButton(this, state.cut.next());
-  });
-  $(".btn.cut").on("click", function(event) {
-      $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/cut_cursor.svg'), auto");
-  });
-    $(".btn.lupa").on("click", function(event) {
-      $(function() {
-    	   $(".volos").draggable();
-         $(".volos").css("opacity", "1");
-      });
-      $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/lupa_cursor.svg'), auto");
+  $(".btn").on("click", function(event) {
+    panel.onClick(this);
   });
 
   $(".btn.zlo").on("click", function(event) {
-    drawButton(this, state.zlo.next());
+    $(this).css("background-color", "red");
     setTimeout(function () {
-      $("body").css("background-color", state.zlo.get());
+      $("body").css("background-color", "red");
     }, 1500);
-    $(".btn, .zlo_fon, .btn_fon, .text, .podval").remove();
-    $(".fish").removeClass("fish1 fish2 fish3 fish4");
-    $(".fish").addClass("zlofish");
     setTimeout(function () {
-      $(".volos").remove();
+      $(".btn, .zlo_fon, .btn_fon, .text, .podval").remove();
+      $(".fish").removeClass("fish1 fish2 fish3 fish4");
+      $(".fish").addClass("zlofish");
     }, 500);
     setTimeout(function () {
+      $(".volos").remove();
+    }, 1000);
+    setTimeout(function () {
       $(".foot").css("background-image", "url('images/foot_zlo.svg')");
-    }, 1500);
+    }, 2000);
     setTimeout(function () {
       $(".foot").css("opacity", "0");
-    }, 2500);
+    }, 3000);
     setTimeout(function () {
       $(".game_over").css("visibility", "visible");
-    }, 3000);
+    }, 3500);
 
 
   });
 
   $(".volos").on("click", function() {
-    state.draw(this);
+    panel.draw(this);
   });
 
 });
