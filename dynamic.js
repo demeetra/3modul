@@ -79,12 +79,17 @@ $(document).ready(function() {
     drawButton(this, state.color.next());
   });
   $(".btn.brush").on("click", function(event) {
+    $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/brush_cursor.svg'), auto");
     drawButton(this, state.brush.next());
   });
   $(".btn.cut, .btn.lupa").on("click", function(event) {
     drawButton(this, state.cut.next());
   });
+  $(".btn.cut").on("click", function(event) {
+      $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/cut_cursor.svg'), auto");
+  });
   $(".btn.lupa").on("click", function(event) {
+    $("body").css("cursor", "url('https://raw.githubusercontent.com/demeetra/3modul/main/images/lupa_cursor.svg'), auto");
     drawButton(this, state.lupa.next());
   });
   $(".btn.zlo").on("click", function(event) {
