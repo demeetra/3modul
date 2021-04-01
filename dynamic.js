@@ -88,19 +88,22 @@ $(document).ready(function() {
     drawButton(this, state.zlo.next());
     setTimeout(function () {
       $("body").css("background-color", state.zlo.get());
-    }, 1000);
+    }, 1500);
     $(".btn, .zlo_fon, .btn_fon, .text, .podval").remove();
     $(".fish").removeClass("fish1 fish2 fish3 fish4");
     $(".fish").addClass("zlofish");
     setTimeout(function () {
       $(".volos").remove();
-    }, 1000);
+    }, 500);
     setTimeout(function () {
       $(".foot").css("background-image", "url('images/foot_zlo.svg')");
-    }, 1000);
+    }, 1500);
     setTimeout(function () {
-      $(".fiss, .foot").remove();
-    }, 2000);
+      $(".foot").css("opacity", "0");
+    }, 2500);
+    setTimeout(function () {
+      $(".game_over").css("visibility", "visible");
+    }, 3000);
   });
 
   $(".volos").on("click", function() {

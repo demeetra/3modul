@@ -14,13 +14,21 @@
 body{
   background-color: black;
 }
-h2{
+h2, h1{
   color: white;
   font-family: 'cyntho next bold';
 }
-h3{
+h3, h4{
   color: white;
   font-family: 'cyntho next';
+}
+h1{
+  font-size: 90px;
+  line-height: 95px;
+}
+h4{
+  font-size: 40px;
+  line-height: 45px;
 }
 .main {
   height: auto;
@@ -272,9 +280,10 @@ margin-top: 16%;
 .zlofish{
   -webkit-mask: url('https://raw.githubusercontent.com/demeetra/3modul/main/images/zlofish.svg') top left / cover;
   width: 30%;
-  animation: zlo 2s infinite linear;
+  animation: zlo 1s infinite linear;
   background-color: white;
   padding-bottom: 18.5%;
+  z-index: 1;
 }
 .f1{top: 10%;}
 .f2{top: 18%;}
@@ -341,7 +350,15 @@ margin-top: 16%;
 .f42{top: 85%;}
 .f43{top: 95%;}
 
-
+.game_over{
+  visibility: hidden;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 20%;
+  width: 60%;
+  padding-bottom: 30%;
+}
 /* подвал */
 .dno{
   position: relative;

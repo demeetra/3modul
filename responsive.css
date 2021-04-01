@@ -75,11 +75,21 @@
       width: 80%;
       padding-bottom: 60%;
     }
+    h1{
+      font-size: 70px;
+      line-height: 75px;
+    }
+    h4{
+      font-size: 30px;
+      line-height: 35px;
+    }
 @media only screen and (min-width: 1024px) and (max-width: 1080px) {
   h2, h3{
     font-size: 17px;
     line-height: 22px;
   }
+
+
   .text{
     width: 33%;
   }
