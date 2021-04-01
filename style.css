@@ -384,8 +384,8 @@ p{
 }
 .octopus{
   position: relative;
-  width: 60%;
-  padding-bottom: 40%;
+  width: 40%;
+  padding-bottom: 30%;
   background-image: url('images/octopus.svg');
   background-size: 100% 100%;
 }
