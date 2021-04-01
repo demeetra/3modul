@@ -2,16 +2,23 @@ $(document).ready(function() {
 
   let colors = ["pink", "yellow", "white", "green", "white"];
   let animation = ["animation1", "animation2", "animation3", "animation4", "animation5", "animation6", "animation7"];
-  function update () {
+  function updateColor () {
       $(".fish").removeClass("pink yellow green white");
-      $(".fish").removeClass("animation1 animation2 animation3 animation4 animation5 animation6 animation7");
       $(".fish").each( function(index) {
           $(this).addClass(colors[Math.floor(Math.random() * colors.length)]);
+      });
+      setInterval (updateColor, 1000);
+  }
+  updateColor();
+
+  function update () {
+      $(".fish").removeClass("animation1 animation2 animation3 animation4 animation5 animation6 animation7");
+      $(".fish").each( function(index) {
           $(this).addClass(animation[Math.floor(Math.random() * animation.length)]);
       });
   }
   update();
-  // setInterval (update, 1000);
+
 
   class ValuesLoop {
     constructor(default_, values) {
@@ -47,7 +54,6 @@ $(document).ready(function() {
         }
         if (this.color.isSet()) {
             $(".color_cursor").css("background-color", this.color.get());
-            console.log("color");
             $(element).css("background-color", this.color.get());
         }
         if (this.brush.isSet()){
