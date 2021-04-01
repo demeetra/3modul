@@ -1,13 +1,13 @@
 @import 'reset.css';
 @font-face {
     font-family: "cyntho next bold";
-    src: url("fonts/CynthoNext-Bold.ttf") format('truetype');
+    src: url("../fonts/CynthoNext-Bold.ttf") format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
     font-family: "cyntho next";
-    src: url("fonts/CynthoNext-Light.ttf") format('truetype');
+    src: url("../fonts/CynthoNext-Light.ttf") format('truetype');
     font-style: normal;
     font-weight: normal;
 }
@@ -102,7 +102,7 @@ h4{
   left: 60%;
   width: 10%;
   padding-bottom: 70%;
-  background-image: url('images/foot1.svg');
+  background-image: url('../images/foot1.svg');
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -384,7 +384,7 @@ button{
   position: relative;
   width: 100%;
   padding-bottom: 10%;
-  background-image: url('images/dno.svg');
+  background-image: url('../images/dno.svg');
   background-size: 100% 100%;
 }
 .podval_octopus{
@@ -396,7 +396,7 @@ button{
   position: relative;
   width: 40%;
   padding-bottom: 30%;
-  background-image: url('images/octopus.svg');
+  background-image: url('../images/octopus.svg');
   background-size: 100% 100%;
 }
 
@@ -404,7 +404,7 @@ button{
   position: absolute;
   top: 90%;
   left: 30%;
-  background-image: url("images/bubble_fish.svg");
+  background-image: url("../images/bubble_fish.svg");
   background-size: 100% 100%;
   width: 40%;
   padding-bottom: 20%;
@@ -415,7 +415,7 @@ button{
   padding-bottom: 20%;
   top: 50%;
   left: 50%;
-  background-image: url('images/buble_octopus.svg');
+  background-image: url('../images/buble_octopus.svg');
   background-size: 100% 100%;
 }
 .podval_logo{
@@ -435,7 +435,7 @@ button{
   left: 35%;
   width: 10%;
   padding-bottom: 7%;
-  background-image: url("images/adc.svg");
+  background-image: url("../images/adc.svg");
 }
 .name{
   vertical-align: bottom;
@@ -448,5 +448,5 @@ button{
   left: 85%;
   width: 10%;
   padding-bottom: 7%;
-  background-image: url("images/logo.svg");
+  background-image: url("../images/logo.svg");
 }
