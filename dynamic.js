@@ -86,10 +86,21 @@ $(document).ready(function() {
   });
   $(".btn.zlo").on("click", function(event) {
     drawButton(this, state.zlo.next());
-    $("body").css("background-color", state.zlo.get());
+    setTimeout(function () {
+      $("body").css("background-color", state.zlo.get());
+    }, 1000);
     $(".btn, .zlo_fon, .btn_fon, .text, .podval").remove();
-    // $(".fish").removeClass("fish1 fish2 fish3 fish4");
+    $(".fish").removeClass("fish1 fish2 fish3 fish4");
     $(".fish").addClass("zlofish");
+    setTimeout(function () {
+      $(".volos").remove();
+    }, 1000);
+    setTimeout(function () {
+      $(".foot").css("background-image", "url('images/foot_zlo.svg')");
+    }, 1000);
+    setTimeout(function () {
+      $(".fiss, .foot").remove();
+    }, 2000);
   });
 
   $(".volos").on("click", function() {
