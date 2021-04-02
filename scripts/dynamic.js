@@ -17,12 +17,12 @@ $(document).ready(function() {
     $(".overflow_wrapper").append('<div class="' + elClass + '" style="' + elPosPh + elAnimPh + '"></div>')
   }
 
-  for (let start = 1; start < 11; start++) {
+  for (let start = 1; start < 20; start++) {
     addFish(randInt(1, 4), start*5 + randInt(-5, 5), randInt(0, 100), randInt(10, 20));
   }
   for (let start = 11; start < 20; start++) {
     for (let i=0; i< start/2 + (start/4)*(start/4)/2; i++) {
-      addFish(randInt(1, 4), start*5 + randInt(-5, 5), randInt(0, 100), randInt(10, 20));
+      addFish(randInt(1, 4) + " extra_fish", start*5 + randInt(-5, 5), randInt(0, 100), randInt(10, 20));
     }
   }
   addFish(5, 70, randInt(0, 10), randInt(10, 20), false);
@@ -144,8 +144,9 @@ $(document).ready(function() {
   $(".btn.zlo").on("click", function(event) {
     $(this).css("background-color", "red");
     setTimeout(function () {
-      $(".btn, .zlo_fon, .btn_fon, .text, .podval, .magnify_glass, .bubble_fish").remove();
+      $(".btn, .zlo_fon, .btn_fon, .text, .podval, .magnify_glass, .bubble_fish, .extra_fish").remove();
       $(".fish").removeClass("fish1 fish2 fish3 fish4");
+      $(".fish").css("animation", "");
       $(".fish").addClass("zlofish");
     }, 500);
     setTimeout(function () {

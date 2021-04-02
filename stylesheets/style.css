@@ -199,6 +199,11 @@ margin-top: 16%;
   background-color:white;
 }
 
+@keyframes zlo {
+  0%{left: -20%;}
+  100%{left: 110%;}
+}
+
 @keyFrames moveFish {
   0%   {transform: translateX(   0);}
   50%  {transform: translateX(100vw);}
